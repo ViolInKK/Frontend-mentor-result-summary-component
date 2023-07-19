@@ -1,38 +1,170 @@
 .App {
+  font-size: 20px;
+  background-color: aliceblue;
   text-align: center;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.summary-results{
   display: flex;
   flex-direction: column;
+}
+
+.summary-results h2{
+  margin-top: 1.3em;
+  text-align: left;
+  transform: translateX(50px);
+  font-size: 1.2em;
+  margin-bottom: 1.3em;
+}
+
+.summary-item{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  max-width: 290px;
+  transform: translateX(50px);
+  text-align: center;
   align-items: center;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.summary-item[data-item-type="accent-1"]{
+  background-color: hsl(0, 100%, 67%, .1);
+}
+
+.summary-item[data-item-type="accent-2"]{
+  background-color: hsl(39, 100%, 56%,.1);
+}
+
+.summary-item[data-item-type="accent-3"]{
+  background-color: hsl(166, 100%, 37%, .1);
+}
+
+.summary-item[data-item-type="accent-4"]{
+  background-color: hsl(234, 85%, 45%, .1);
+}
+
+.summary-result-title h3{
+  margin-left: 20px
+}
+
+.summary-result-title h3[data-item-type="accent-1"]{
+  color: hsl(0, 100%, 67%);
+}
+
+.summary-result-title h3[data-item-type="accent-2"]{
+  color: hsl(39, 100%, 56%);
+}
+
+.summary-result-title h3[data-item-type="accent-3"]{
+  color:hsl(166, 100%, 37%);
+}
+
+.summary-result-title h3[data-item-type="accent-4"]{
+  color: hsl(234, 85%, 45%);
+}
+
+.summary-item p{
+  margin-right: 20px;
+  font-size: 1.17em;
+}
+
+.summary-item span{
+  font-weight: 700;
+}
+
+.summary-result-title {
+  display: flex;
+  align-items: center;
+}
+
+.icon{
+  transform: translateX(10px);
+}
+
+.flexBox-container{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.result{
+  color: rgb(184, 175, 255);
+  width: 18em;
+  height: 25em;
+  border-radius: 10%;
+  background: linear-gradient(0deg, rgba(49,43,236,1) 0%, rgba(105,67,255,1) 100%);
+  z-index: 1;
+}
+
+.result h2{
+  margin-top: 1.3em;
+  font-size: 1.2em;
+}
+
+.result h1{
   color: white;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 1.5em;
 }
 
-.App-link {
-  color: #61dafb;
+.result-paragraph{
+  font-size: 1.1rem;
+  max-width: 14em;
+  margin: auto;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score{
+  font-weight: 650;
+  font-family: "Hanken Grotesk", sans-serif;
+  display: grid;
+  place-content: center;
+  width: 12rem;
+  margin-inline: auto;
+  background: linear-gradient(0deg, rgba(71,52,240,1) 0%, rgba(75,33,203,1) 100%);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+
+.score span{
+  color: white;
+  font-size: 4rem;
+}
+
+
+.summary{
+  width: 18em;
+  height: 25em;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+  background-color: white;
+  box-shadow: 10px 35px 55px hsla(0, 0%, 44%, 0.2);
+  transform: translateX(-35px);
+}
+
+.summary span{
+  margin-right: 5px;
+}
+
+.summary button{
+  border: none;
+  background-color: rgb(48,59,89);
+  color: white;
+  padding: 0.7em 4.9em;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  transform: translateX(15px);
+  margin-top: 5px;
+}
+
+body {
+  margin: 0 auto;
 }
